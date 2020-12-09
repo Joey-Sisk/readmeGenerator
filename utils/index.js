@@ -3,10 +3,9 @@ const util = require("util");
 const fs = require("fs");
 
 
-const writeAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 let generateMarkdown = ({
-  projectName,
   description,
   usage,
   license,
@@ -14,8 +13,8 @@ let generateMarkdown = ({
   email,
   usersName,
   github,
-}) => { 
-  return `# ${projectName}
+}) => {
+  `# Cool Project
 ![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
 
 ## Description
@@ -68,14 +67,9 @@ npm test
 
 If you have any questions about the repo, open an issue or contact me directly at ${email}. You can find more of my work at [${usersName}](${github}).
 `;
-}
+};
 
-let questions = [
-  {
-    type: "input",
-    name: "projectName",
-    message: "What is the name of your project?:",
-  },
+const questions = [
   {
     type: "input",
     name: "description",
@@ -118,11 +112,9 @@ inquirer
   .prompt(questions)
   .then(answers => {
     const template = generateMarkdown(answers);
-
-    writeAsync("testingREADME.md", template);
-
+    writeFileAsync("testingREADME.md", template);
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error);
   });
 
