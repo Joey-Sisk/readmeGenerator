@@ -1,9 +1,9 @@
-# Probious God
-![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
+# asd
+licenses.MIT.icon
 
 ## Description
 
-Becoming awesome at probious
+asd
 
 ## Table of Contents 
 
@@ -29,15 +29,17 @@ npm i
 
 ## Usage
 
-to flex on my bronze folk
+asd
 
 ## License
 
-MIT
+###licenses.MIT.link
+
+licenses.MIT.link
   
 ## Contributing
 
-Me, Myself, and I
+asd
 
 ## Tests
 
@@ -49,4 +51,4 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at saucebrigade@gmail.com. You can find more of my work at [Leo](I don't have a github account.).
+If you have any questions about the repo, open an issue or contact me directly at asd. You can find more of my work at [asd](I don't have a github account.).

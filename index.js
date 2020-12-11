@@ -1,74 +1,9 @@
-const inquirer = require("inquirer");
+const inquirer = require("inquirer"); // connect the neccesary packages
 const util = require("util");
 const fs = require("fs");
+const readmeTemplate = require("./mdTemplate.js");
 
-
-const writeAsync = util.promisify(fs.writeFile);
-
-let generateMarkdown = ({
-  projectName,
-  description,
-  usage,
-  license,
-  contributers,
-  email,
-  usersName,
-  github,
-}) => { 
-  return `# ${projectName}
-![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
-
-## Description
-
-${description}
-
-## Table of Contents 
-
-* [Installation](#installation)
-
-* [Usage](#usage)
-
-* [License](#license)
-
-* [Contributing](#contributing)
-
-* [Tests](#tests)
-
-* [Questions](#questions)
-
-## Installation
-
-To install necessary dependencies, run the following command:
-
-\`\`\`
-npm i
-\`\`\`
-
-## Usage
-
-${usage}
-
-## License
-
-${license}
-  
-## Contributing
-
-${contributers}
-
-## Tests
-
-To run tests, run the following command:
-
-\`\`\`
-npm test
-\`\`\`
-
-## Questions
-
-If you have any questions about the repo, open an issue or contact me directly at ${email}. You can find more of my work at [${usersName}](${github}).
-`;
-}
+const writeAsync = util.promisify(fs.writeFile); // promisify keeps writeFile from callback hell
 
 let questions = [
   {
@@ -87,9 +22,10 @@ let questions = [
     message: "In a sentence please explain the usage of your project:",
   },
   {
-    type: "input",
+    type: "list",
     name: "license",
     message: "Which license type are you using?:",
+    choices: ["MIT", "GNU", "Apache"],
   },
   {
     type: "input",
@@ -114,37 +50,41 @@ let questions = [
   },
 ];
 
+let licenses = {
+  // information about the licenses
+  MIT: {
+    name: "MIT",
+    link: "https://opensource.org/licenses/MIT",
+    icon:
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  },
+  GNU: {
+    name: "GNU",
+    link: "https://www.gnu.org/licenses/gpl-3.0.en.html",
+    icon:
+      "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+  },
+  Apache: {
+    name: "Apache",
+    link: "https://www.apache.org/licenses/LICENSE-2.0",
+    icon:
+      "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+  },
+  unlicensed: {
+    name: "Unlicensed",
+    link: "This repo is still pending a license.",
+    icon:
+      "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)",
+  },
+};
+
 inquirer
   .prompt(questions)
-  .then(answers => {
-    const template = generateMarkdown(answers);
+  .then((answers) => {
+    const template = readmeTemplate(answers);
 
     writeAsync("testingREADME.md", template);
-
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error);
   });
-
-// const promptUser = () => {
-//   return inquirer.prompt([
-
-//   ]);
-// };
-
-// const init = async () => {
-//   console.log("Are you ready to write your readme file?");
-//   try {
-//     const answers = await promptUser();
-
-//     const markdown = generateMarkdown(answers);
-
-//     await writeFileAsync("README.md", markdown);
-
-//     console.log("Congrat's, you've written a readme!");
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
-
-// init();
