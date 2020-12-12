@@ -1,4 +1,5 @@
-const licensed = { // object that connects license info to page
+const licensed = {
+  // object that connects license info to page
   licenseIconCurrent(license) {
     let icon = licenses[license].icon;
     return icon;
@@ -87,9 +88,9 @@ ${usage}
 
 ## License
 
-###${licensed.licenseNameCurrent(license)}
+- ${licensed.licenseNameCurrent(license)}
 
-${licensed.licenseLinkCurrent(license)}
+- ${licensed.licenseLinkCurrent(license)}
   
 ## Contributing
 

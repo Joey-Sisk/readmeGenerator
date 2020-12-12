@@ -25,7 +25,7 @@ let questions = [
     type: "list",
     name: "license",
     message: "Which license type are you using?:",
-    choices: ["MIT", "GNU", "Apache"],
+    choices: ["MIT", "GNU", "Apache", "Unlicensed"],
   },
   {
     type: "input",
@@ -55,7 +55,7 @@ inquirer
   .then((answers) => {
     const template = readmeTemplate(answers);
 
-    writeAsync("testingREADME.md", template);
+    writeAsync("sample-README.md", template);
   })
   .catch((error) => {
     console.log(error);
