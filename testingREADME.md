@@ -1,9 +1,9 @@
-# asd
-licenses.MIT.icon
+# 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-asd
+
 
 ## Table of Contents 
 
@@ -29,17 +29,17 @@ npm i
 
 ## Usage
 
-asd
+
 
 ## License
 
-###licenses.MIT.name
+###MIT
 
-licenses.MIT.link
+https://opensource.org/licenses/MIT
   
 ## Contributing
 
-asd
+
 
 ## Tests
 
@@ -51,4 +51,4 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at asd. You can find more of my work at [asd](asd).
+If you have any questions about the repo, open an issue or contact me directly at . You can find more of my work at [](I don't have a github account.).
