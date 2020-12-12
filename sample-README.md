@@ -3,7 +3,7 @@
 
 ## Description
 
-This readme generator is designed to 
+This node tool will generate a markdown readme file based on user input.
 
 ## Table of Contents 
 
@@ -29,7 +29,7 @@ npm i
 
 ## Usage
 
-
+Answer the prompts and a file will be created.
 
 ## License
 
@@ -39,7 +39,7 @@ npm i
   
 ## Contributing
 
-
+My instructor Calven, my tutor Kumar, my many helpful class TA's.
 
 ## Tests
 
@@ -51,4 +51,4 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at . You can find more of my work at [](I don't have a github account.).
+If you have any questions about the repo, open an issue or contact me directly at myemail@mailmail.com. You can find more of my work at [Joey Sisk](github.com/joey-sisk).

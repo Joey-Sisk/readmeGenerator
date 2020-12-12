@@ -55,7 +55,7 @@ inquirer
   .then((answers) => {
     const template = readmeTemplate(answers);
 
-    writeAsync("testingREADME.md", template);
+    writeAsync("sample-README.md", template);
   })
   .catch((error) => {
     console.log(error);
