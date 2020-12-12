@@ -25,7 +25,7 @@ let questions = [
     type: "list",
     name: "license",
     message: "Which license type are you using?:",
-    choices: ["MIT", "GNU", "Apache"],
+    choices: ["MIT", "GNU", "Apache", "Unlicensed"],
   },
   {
     type: "input",

@@ -1,9 +1,9 @@
-# 
+# Readme Generator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-
+This readme generator is designed to 
 
 ## Table of Contents 
 
@@ -33,9 +33,9 @@ npm i
 
 ## License
 
-###MIT
+- MIT
 
-https://opensource.org/licenses/MIT
+- https://opensource.org/licenses/MIT
   
 ## Contributing
 
