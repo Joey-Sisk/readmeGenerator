@@ -33,7 +33,7 @@ asd
 
 ## License
 
-###licenses.MIT.link
+###licenses.MIT.name
 
 licenses.MIT.link
   
@@ -51,4 +51,4 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at asd. You can find more of my work at [asd](I don't have a github account.).
+If you have any questions about the repo, open an issue or contact me directly at asd. You can find more of my work at [asd](asd).

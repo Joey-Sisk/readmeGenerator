@@ -1,12 +1,15 @@
 const licensed = {
   licenseIconCurrent(license) {
-    return `licenses.${license}.icon`;
+    let icon = `licenses.${license}.icon`;
+    return icon;
   },
   licenseLinkCurrent(license) {
-    return `licenses.${license}.link`;
+    let link = `licenses.${license}.link`;
+    return link;
   },
   licenseNameCurrent(license) {
-    return `licenses.${license}.link`;
+    let name = `licenses.${license}.name`;
+    return name;
   },
 };
 
